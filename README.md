@@ -29,9 +29,9 @@ Please refer to `requirements.txt <http://github.com/marcelomilo/BulletShotNews/
 
 Installation
 ============
-#)  Get it from the Cheese Shop::
+**)  Get it from the Cheese Shop::**
 
-  pip install BulletShotNews
+	pip install BulletShotNews
 
     **Or** get the latest & greatest from Github and link it to your
     application tree::
@@ -42,7 +42,7 @@ Installation
     `VirtualEnv <http://pypi.python.org/pypi/virtualenv>`_ in order to
     keep your Python environment somewhat clean.)
 
-#)  Add newsletter and to ``INSTALLED_APPS`` in settings.py and make sure that
+**)  Add newsletter and to ``INSTALLED_APPS`` in settings.py and make sure that**
     your favourite rich text widget (optional), some Django contrib dependencies,
     `sorl-thumbnail <http://sorl-thumbnail.readthedocs.org/en/latest/installation.html>`_
     and `django-extensions <https://github.com/django-extensions/django-extensions>`_
@@ -63,7 +63,7 @@ Installation
 	    ...
 	)
 
-#)  Install and configure your preferred rich text widget (optional).
+**)  Install and configure your preferred rich text widget (optional).**
 
     Known to work are `django-imperavi <http://pypi.python.org/pypi/django-imperavi>`_
     as well as for `django-tinymce <http://pypi.python.org/pypi/django-tinymce>`_.
@@ -79,7 +79,7 @@ Installation
     If not set, django-newsletter will fall back to Django's default TextField
     widget.
 
-#)  Import subscription, unsubscription and archive URL's somewhere in your
+**)  Import subscription, unsubscription and archive URL's somewhere in your**
     `urls.py`::
 
 	urlpatterns = patterns('',
@@ -88,20 +88,20 @@ Installation
 	    ...
 	)
 
-#)  Enable Django's `staticfiles <http://docs.djangoproject.com/en/dev/howto/static-files/>`_
+**)  Enable Django's** `staticfiles <http://docs.djangoproject.com/en/dev/howto/static-files/>`_
     app so the admin icons, CSS and JavaScript will be available where
     we expect it.
 
-#)  Create required data structure and load default template fixture::
+**)  Create required data structure and load default template fixture::**
 
 	./manage.py syncdb
 	./manage.py loaddata default_templates
 
-#)  Change the default contact email listed in
+**)  Change the default contact email listed in**
     ``templates/newsletter/subscription_subscribe.html`` and
     ``templates/newsletter/subscription_update.html``.
 
-#)  Run the tests to see if it all works::
+**)  Run the tests to see if it all works::**
 
 	./manage.py test
 
@@ -109,7 +109,7 @@ Installation
     If it doesn't: that's a good sign, chap. You'll probably have yourself a
     working configuration!
 
-#)  Add jobs for sending out mail queues to `crontab <http://linuxmanpages.com/man5/crontab.5.php>`_::
+**)  Add jobs for sending out mail queues to `crontab <http://linuxmanpages.com/man5/crontab.5.php>`_::**
 
 	@hourly /path/to/my/project/manage.py runjobs hourly
 	@daily /path/to/my/project/manage.py runjobs daily
@@ -131,10 +131,10 @@ by running the following command::
 
 Usage
 =====
-#) Start the development server: ``./manage.py runserver``
-#) Navigate to ``/admin/`` and: behold!
-#) Put a submission in the queue.
-#) Submit your message with ``./manage.py runjob submit``
+**) Start the development server:** ``./manage.py runserver``
+**) Navigate to ``/admin/`` and: behold!**
+**) Put a submission in the queue.**
+**) Submit your message with ``./manage.py runjob submit``**
 
 
 Unit tests
